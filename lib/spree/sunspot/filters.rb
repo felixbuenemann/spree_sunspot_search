@@ -15,7 +15,7 @@ module Spree
       end
 
       #def self.filter_for(name)
-      #  @filters.select{|f| f.display_name == name || f.search_param == name }.first
+      #  @filters.select{|f| f.search_param == name }.first
       #end
 
       def method_missing(method, *args)

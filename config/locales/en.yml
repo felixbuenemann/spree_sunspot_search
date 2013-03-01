@@ -5,3 +5,7 @@ en:
   empty_search_results: "No products found"
   clear_all: "Clear All"
   search: "Search"
+  filter:
+    price: "Price"
+    category_name: "Category"
+    brand_name: "Brand"
