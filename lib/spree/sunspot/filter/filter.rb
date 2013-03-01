@@ -40,11 +40,14 @@ module Spree
           when "Range"
             values.collect do |range|
               if range.first == 0
-                { :display => "Under #{number_to_currency(range.last, :precision => 0)}", :value => "#{range.first},#{range.last}" }
+                { :display => I18n.t(:range_under, :to => number_to_currency(range.last, :precision => 0)),
+                  :value => "#{range.first},#{range.last}" }
               elsif range.last == 0
-                { :display => "#{number_to_currency(range.first, :precision => 0)}+", :value => "#{range.first},*" }
+                { :display => I18n.t(:range_over, :from => number_to_currency(range.first, :precision => 0)),
+                  :value => "#{range.first},*" }
               else
-                { :display => "#{number_to_currency(range.first, :precision => 0)} - #{number_to_currency(range.last, :precision => 0)}",
+                { :display => I18n.t(:range, :from => number_to_currency(range.first, :precision => 0),
+                                               :to => number_to_currency(range.last,  :precision => 0)),
                   :value => "#{range.first},#{range.last}" }
               end
             end

@@ -5,6 +5,9 @@ en:
   empty_search_results: "No products found"
   clear_all: "Clear All"
   search: "Search"
+  range_under: "Under %{to}"
+  range: "%{from} – %{to}"
+  range_over: "%{from}+"
   filter:
     price: "Price"
     category_name: "Category"
